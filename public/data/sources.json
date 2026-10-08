@@ -1,0 +1,50 @@
+{
+  "sources": [
+    {
+      "id": "NW",
+      "name": "NW — Nazrul Wing",
+      "url": "https://docs.google.com/spreadsheets/d/1mop7ZAi0wxPjLmz-Fxc8u0vBKA9gtglrvO234QTEXDo/edit?gid=929163505#gid=929163505",
+      "docId": "1mop7ZAi0wxPjLmz-Fxc8u0vBKA9gtglrvO234QTEXDo",
+      "gid": "929163505",
+      "category": "Logistics",
+      "responsible": "Nazrul",
+      "color": "#3b82f6",
+      "enabled": true
+    },
+    {
+      "id": "CASH",
+      "name": "Cash Accounts",
+      "url": "https://docs.google.com/spreadsheets/d/1HjbDxsXofIz_qmpK9RyEIDR60O0Pj8uuAfoTTZPDFCc/edit?gid=0#gid=0",
+      "docId": "1HjbDxsXofIz_qmpK9RyEIDR60O0Pj8uuAfoTTZPDFCc",
+      "gid": "0",
+      "category": "Finance",
+      "responsible": "Owner",
+      "color": "#10b981",
+      "enabled": true
+    },
+    {
+      "id": "UNO",
+      "name": "UNO — Yeasin Workstation",
+      "url": "https://docs.google.com/spreadsheets/d/1bqkVehJun-96yjFNrJRw9S89e3YSjt1pu8e6d0x07bk/edit?gid=1618809603#gid=1618809603",
+      "docId": "1bqkVehJun-96yjFNrJRw9S89e3YSjt1pu8e6d0x07bk",
+      "gid": "1618809603",
+      "category": "Logistics",
+      "responsible": "Yeasin",
+      "color": "#8b5cf6",
+      "enabled": true
+    },
+    {
+      "id": "ALPANA",
+      "name": "Alpana Cash",
+      "url": "https://docs.google.com/spreadsheets/d/1gimiqrecqXwGxTaFjpcprgU6ZvMaMZKYN44599K62cY/edit?pli=1&gid=0#gid=0",
+      "docId": "1gimiqrecqXwGxTaFjpcprgU6ZvMaMZKYN44599K62cY",
+      "gid": "0",
+      "category": "Finance",
+      "responsible": "Alpana",
+      "color": "#f59e0b",
+      "enabled": true
+    }
+  ],
+  "accessEmail": "bahalul1964@gmail.com",
+  "lastUpdated": "2026-10-09T00:00:00Z"
+}
