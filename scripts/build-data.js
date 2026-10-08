@@ -23,6 +23,7 @@ async function main() {
     console.log(`Top Clients Indexed: ${data.meta.topClients.length}`);
     console.log(`Top Sales Reps: ${data.meta.topReps.length}`);
     console.log('Successfully wrote public/data and dist/data artifacts.\n');
+    process.exit(0);
   } catch (err) {
     console.error('Fatal Build Error:', err);
     process.exit(1);

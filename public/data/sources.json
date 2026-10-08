@@ -1,7 +1,7 @@
 {
   "endpoint": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
   "accessEmail": "bahalul1964@gmail.com",
-  "lastUpdated": "2026-10-08T21:57:09.992Z",
+  "lastUpdated": "2026-10-08T21:59:15.164Z",
   "mode": "Multi-Source Full Stack Data Pipeline (Apps Script + Google Sheets Live CSV)",
   "sourcesList": [
     {
@@ -10,7 +10,7 @@
       "url": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
       "status": "active",
       "recordsCount": 10670,
-      "lastSynced": "2026-10-08T21:56:46.666Z",
+      "lastSynced": "2026-10-08T21:58:54.144Z",
       "message": "Direct live stream connected and active."
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://docs.google.com/spreadsheets/d/1U1oAloFWrNMWpwe5KHcUDxGv8gTQyp8prAcMvyGq5yk/edit?resourcekey=&gid=257611599#gid=257611599",
       "status": "active",
       "recordsCount": 6145,
-      "lastSynced": "2026-10-08T21:56:56.637Z",
+      "lastSynced": "2026-10-08T21:59:02.333Z",
       "message": "Successfully ingested 6145 live sheet entries."
     },
     {
@@ -28,7 +28,7 @@
       "url": "https://docs.google.com/spreadsheets/d/1Vy0LB_ROivQthO41x49ezzIi2xljesjdC59OlUSmG0E/edit?gid=1061898040#gid=1061898040",
       "status": "active",
       "recordsCount": 98,
-      "lastSynced": "2026-10-08T21:57:04.439Z",
+      "lastSynced": "2026-10-08T21:59:09.714Z",
       "message": "Successfully ingested 98 live sheet entries."
     },
     {
@@ -37,7 +37,7 @@
       "url": "https://docs.google.com/spreadsheets/d/1bqkVehJun-96yjFNrJRw9S89e3YSjt1pu8e6d0x07bk/edit?gid=0#gid=0",
       "status": "protected",
       "recordsCount": 0,
-      "lastSynced": "2026-10-08T21:57:08.888Z",
+      "lastSynced": "2026-10-08T21:59:13.374Z",
       "message": "Google Sheet requires OAuth / Domain Permissions. Handled gracefully."
     },
     {
@@ -46,7 +46,7 @@
       "url": "https://docs.google.com/spreadsheets/d/1mop7ZAi0wxPjLmz-Fxc8u0vBKA9gtglrvO234QTEXDo/edit?gid=1592258554#gid=1592258554",
       "status": "protected",
       "recordsCount": 0,
-      "lastSynced": "2026-10-08T21:57:09.991Z",
+      "lastSynced": "2026-10-08T21:59:15.162Z",
       "message": "Google Sheet requires OAuth / Domain Permissions. Handled gracefully."
     }
   ]
