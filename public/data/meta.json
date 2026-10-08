@@ -1,8 +1,8 @@
 {
   "endpoint": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
-  "totalOrders": 10670,
-  "totalRevenue": 1329182400,
-  "totalItems": 38032,
+  "totalOrders": 16913,
+  "totalRevenue": 2592212437,
+  "totalItems": 44177,
   "topProducts": [
     {
       "name": "HONOR 400 5G - 12GB/256GB",
@@ -213,270 +213,410 @@
       "revenue": 7862000,
       "qty": 210,
       "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 14 Pro Plus 5G 8/256",
+      "count": 86,
+      "revenue": 7385000,
+      "qty": 237,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 Pro Plus 5G - 8/256GB",
+      "count": 113,
+      "revenue": 7288000,
+      "qty": 187,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "HONOR 600 5G - 12/512GB",
+      "count": 56,
+      "revenue": 7190000,
+      "qty": 132,
+      "brand": "Honor"
+    },
+    {
+      "name": "Redmi 15C 6/128",
+      "count": 61,
+      "revenue": 7142000,
+      "qty": 391,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 Pro 4G - 8/256GB",
+      "count": 116,
+      "revenue": 7074000,
+      "qty": 250,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "POCO X8 Pro 5G - 8/256GB",
+      "count": 76,
+      "revenue": 7052000,
+      "qty": 180,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 Pro Plus 5G - 12/512GB",
+      "count": 73,
+      "revenue": 6364000,
+      "qty": 142,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 17 Pro Max 12/256",
+      "count": 37,
+      "revenue": 5754000,
+      "qty": 115,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15C 4/128",
+      "count": 40,
+      "revenue": 5498800,
+      "qty": 323,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Honor 600 8/256",
+      "count": 38,
+      "revenue": 5070500,
+      "qty": 97,
+      "brand": "Honor"
     }
   ],
   "topClients": [
     {
       "name": "Dazzle",
-      "count": 477,
-      "revenue": 216977600,
+      "count": 591,
+      "revenue": 420970300,
       "address": "021C & 021D, 4th floor, north court, Block B,Jamuna future park,Dhaka.",
       "phone": " +880 18 3099 9969"
     },
     {
       "name": "Famous Telecom",
-      "count": 386,
-      "revenue": 94688500,
+      "count": 537,
+      "revenue": 187951800,
       "address": "4th Floor, Sanmar Ocean City, Nasirabad, Chittagong.",
       "phone": 8801812791896
     },
     {
       "name": "Mobile Paradise",
-      "count": 465,
-      "revenue": 64784100,
+      "count": 703,
+      "revenue": 127761850,
       "address": "Level 4, Block A, Shop 33A, Jamuna future park",
       "phone": "+880 1934-209037"
     },
     {
       "name": "Gadgetopia",
-      "count": 403,
-      "revenue": 59845400,
+      "count": 624,
+      "revenue": 117911200,
       "address": "Level-4, Shop--11, Black-D, Jamuna Future Park",
       "phone": 8801642082924
     },
     {
       "name": "Like Telecom - BCT",
-      "count": 282,
-      "revenue": 45745200,
+      "count": 488,
+      "revenue": 90546947,
       "address": "Basement 2, shop 82, Bashundhara City",
       "phone": 8801742520614
     },
     {
       "name": "Cell Tech BD - JFP",
-      "count": 334,
-      "revenue": 44618800,
+      "count": 637,
+      "revenue": 87221750,
       "address": "Shop#014b,Block#A,level#4, Jamuna future park",
       "phone": "+880 1648-821228"
     },
     {
       "name": "Friends Telecom-Ctg",
-      "count": 238,
-      "revenue": 36382200,
+      "count": 365,
+      "revenue": 71160800,
       "address": "2nd floor,Shop 15,Rizwan Complex,Reazuddin Bazar,Chattogram ",
       "phone": "01820802080"
     },
     {
       "name": "Mars two",
-      "count": 153,
-      "revenue": 29919700,
+      "count": 264,
+      "revenue": 64616000,
       "address": "Shatter khan complex, khandirpar, cumilla",
       "phone": "+8801715146699"
     },
     {
-      "name": "Mobile Park BD",
-      "count": 133,
-      "revenue": 26283200,
-      "address": "37/A2, Block: C, Level: 4, Jamuna Future park",
-      "phone": 8801916858692
-    },
-    {
       "name": "Rahima Tel",
-      "count": 203,
-      "revenue": 25698400,
+      "count": 294,
+      "revenue": 51754800,
       "address": "Khandakar haq tower, khandirpar Cumilla ",
       "phone": "+880 1712-677777"
     },
     {
+      "name": "Mobile Park BD",
+      "count": 255,
+      "revenue": 51220950,
+      "address": "37/A2, Block: C, Level: 4, Jamuna Future park",
+      "phone": 8801916858692
+    },
+    {
       "name": "Bishal Electronics",
-      "count": 192,
-      "revenue": 24842600,
+      "count": 291,
+      "revenue": 49864200,
       "address": "4th Floor, Sanmar Ocean City, Nasirabad, Chittagong.",
       "phone": 8801742227411
     },
     {
       "name": "Phone BD",
-      "count": 171,
-      "revenue": 24439000,
+      "count": 288,
+      "revenue": 46639500,
       "address": "Shop - 2081, Block - C, Level - 4, Jamuna Future park",
       "phone": "+880 1617-301704"
     },
     {
       "name": "GunGun",
-      "count": 198,
-      "revenue": 24127800,
+      "count": 318,
+      "revenue": 46511600,
       "address": "Khalibari more, B, baria sadar",
       "phone": "+8801911097959"
     },
     {
       "name": "Decent",
-      "count": 164,
-      "revenue": 24059000,
+      "count": 310,
+      "revenue": 45796215,
       "address": "4th floor,Finlay sqaure,Nasirabad,Chattogram ",
       "phone": "01872988883"
     },
     {
       "name": "Ambix",
-      "count": 196,
-      "revenue": 22911100,
+      "count": 340,
+      "revenue": 44106850,
       "address": "Shop No - 4A/041A1, Block - A, Level - 4, Jamuna Future Park",
       "phone": "880 1617-301704"
     },
     {
       "name": "Mizan & Brothers",
-      "count": 190,
-      "revenue": 21390000,
+      "count": 269,
+      "revenue": 42596800,
       "address": "Shop No-31, Rizwan Complex, Riazuddin Bazar, Chittagong.",
       "phone": 8801839700300
     },
     {
       "name": "Like Telecom - JFP",
-      "count": 189,
-      "revenue": 20286600,
+      "count": 426,
+      "revenue": 39809150,
       "address": "Level 4 block A shop 30b, Jamuna Future Park",
       "phone": 8801742520614
     },
     {
-      "name": "New Singapore Telecom",
-      "count": 150,
-      "revenue": 19363100,
-      "address": "Tmms mohila market, 2nd Floor, Sadar Bogura. ",
-      "phone": "+880 1755-126987"
-    },
-    {
       "name": "Mobile Bazar Rajshahi",
-      "count": 220,
-      "revenue": 19156100,
+      "count": 326,
+      "revenue": 37334700,
       "address": "Stylo premises, New market opposite side, Sultanabad, Sadar Rajshahi. ",
       "phone": "+880 1717-142452"
     },
     {
+      "name": "New Singapore Telecom",
+      "count": 232,
+      "revenue": 36648200,
+      "address": "Tmms mohila market, 2nd Floor, Sadar Bogura. ",
+      "phone": "+880 1755-126987"
+    },
+    {
       "name": "Cell Tech BD - BCT",
-      "count": 115,
-      "revenue": 17497000,
+      "count": 351,
+      "revenue": 34675435,
       "address": "Basement 01, Shop-70, Bashundhara City",
       "phone": 8801830723375
     },
     {
       "name": "Taham Tech",
-      "count": 84,
-      "revenue": 16364400,
+      "count": 117,
+      "revenue": 32757973,
       "address": "Shop - 021F, Block - D, Level - 4, Jamuna Future Park",
       "phone": "01898898999"
     },
     {
-      "name": "Mars Two",
-      "count": 106,
-      "revenue": 15123000,
-      "address": "Shattar khan complex ",
-      "phone": "+880 1715-146699"
-    },
-    {
       "name": "Cell Mate",
-      "count": 181,
-      "revenue": 14945700,
+      "count": 257,
+      "revenue": 29281400,
       "address": "4th Floor, Finlay Square, Nasirabad, Chittagong.",
       "phone": 8801717132041
     },
     {
       "name": "M/S Bulbul General Electronics",
-      "count": 33,
-      "revenue": 14056400,
+      "count": 47,
+      "revenue": 26279834,
       "address": "A/07 Bazar Road, Savar ",
       "phone": 8801746708701
     },
     {
       "name": "Merajul Telecom",
-      "count": 91,
-      "revenue": 13749400,
+      "count": 142,
+      "revenue": 26142400,
       "address": "Shop: 58, Level: 4, Shah Ali Plaza, Mirpur 10",
       "phone": "01622230958"
     },
     {
-      "name": "Multimedia Gallery",
-      "count": 105,
-      "revenue": 13348400,
-      "address": "Chandpur sadar,,khalibari more",
-      "phone": "+880 1779-970011"
-    },
-    {
       "name": "Faruk Electronics",
-      "count": 150,
-      "revenue": 12999400,
+      "count": 209,
+      "revenue": 25408800,
       "address": "4th Floor, Akhtaruzzaman Center, Agrabad, Chittagong.",
       "phone": 8801843855960
     },
     {
-      "name": "Cell City",
-      "count": 155,
-      "revenue": 12660800,
-      "address": "Zela porishad market, B, baria sadar",
-      "phone": "01797370380"
+      "name": "Multimedia Gallery",
+      "count": 181,
+      "revenue": 25078300,
+      "address": "Chandpur sadar,,khalibari more",
+      "phone": "+880 1779-970011"
     },
     {
       "name": "Naima Telecom",
-      "count": 138,
-      "revenue": 12564200,
+      "count": 214,
+      "revenue": 24575400,
       "address": "3rd floor,Akhtaruzzaman Center,Agrabad,Ctg",
       "phone": "+880 1817-262793"
     },
     {
       "name": "M Classic",
-      "count": 70,
-      "revenue": 10513200,
+      "count": 106,
+      "revenue": 21176800,
       "address": "Ctg",
       "phone": "01828223009"
+    },
+    {
+      "name": "Mars Two",
+      "count": 135,
+      "revenue": 21141000,
+      "address": "Shattar khan complex ",
+      "phone": "+880 1715-146699"
+    },
+    {
+      "name": "Nur EnterPrise",
+      "count": 170,
+      "revenue": 18577400,
+      "address": "9/14,Rezwan complex,Riazuddin bazar,Chattogram",
+      "phone": "  +880 1643-949923"
+    },
+    {
+      "name": "Humayun Enterprise",
+      "count": 195,
+      "revenue": 18094800,
+      "address": "Shop No-15, Rizwan Complex, Riazuddin Bazar, Chittagong.",
+      "phone": 8801815811611
+    },
+    {
+      "name": "Asiq Telecom",
+      "count": 154,
+      "revenue": 18076600,
+      "address": "Level 4,shop 71 Rajuk commercial complex, Uttara azompur",
+      "phone": "01918226222"
+    },
+    {
+      "name": "Idea Gadget",
+      "count": 140,
+      "revenue": 17228200,
+      "address": "Shop-31,Floor-5,Runner plaza,Sadar Bogura.",
+      "phone": "+880 1792-475959"
+    },
+    {
+      "name": "Shuvecca Mobile Electronics",
+      "count": 161,
+      "revenue": 16641200,
+      "address": "Harun Shopping complex, CK Gosh road Mymensingh ",
+      "phone": "01717868652"
+    },
+    {
+      "name": "Tech Safari",
+      "count": 170,
+      "revenue": 15483000,
+      "address": "4th Floor, Bali Arched, Chawkbazar, Chittagong.",
+      "phone": 8801840034503
+    },
+    {
+      "name": "Cell City",
+      "count": 170,
+      "revenue": 14617300,
+      "address": "Zela porishad market, B, baria sadar",
+      "phone": "01797370380"
+    },
+    {
+      "name": "Himel Telecom",
+      "count": 141,
+      "revenue": 13744600,
+      "address": "4th floor,Super Market,Maijdee, Noakhali",
+      "phone": "+880 1629-276117"
+    },
+    {
+      "name": "Emon Telecom",
+      "count": 63,
+      "revenue": 13662500,
+      "address": "Kassaf Market, 3rd Floor, Chittagong Road",
+      "phone": "01869729088"
+    },
+    {
+      "name": "Friends Communication",
+      "count": 195,
+      "revenue": 13613500,
+      "address": "Khandaker haq tower, khandirpar, Cumilla",
+      "phone": "+880 1730-187240"
+    },
+    {
+      "name": "Mobile Plus",
+      "count": 163,
+      "revenue": 13341500,
+      "address": "Bilkis market,Cox’sbazar sadar",
+      "phone": "+880 1845-666606"
     }
   ],
   "topReps": [
     {
       "name": "0025 - Imran Hossain - CTG",
-      "count": 3613,
-      "revenue": 556922300
+      "count": 5518,
+      "revenue": 1095240315
     },
     {
       "name": "0004 - Al Imran",
-      "count": 2532,
-      "revenue": 357539300
+      "count": 4525,
+      "revenue": 702701388
     },
     {
       "name": "0094 - Shaharia Khan",
-      "count": 1934,
-      "revenue": 194213900
+      "count": 2990,
+      "revenue": 378272100
     },
     {
       "name": "0019 - Hafizur Rahman",
-      "count": 797,
-      "revenue": 69543100
+      "count": 1253,
+      "revenue": 135611700
     },
     {
       "name": "0035 - Rejaul Islam Sujon",
-      "count": 361,
-      "revenue": 35655000
+      "count": 542,
+      "revenue": 69544600
     },
     {
       "name": "0070 - Tamal Roy",
-      "count": 309,
-      "revenue": 30864400
+      "count": 497,
+      "revenue": 60355400
     },
     {
       "name": "0033 - Imran Hossain - DHK",
-      "count": 137,
-      "revenue": 26047900
+      "count": 199,
+      "revenue": 48879934
     },
     {
       "name": "Rasel",
-      "count": 194,
-      "revenue": 22220700
-    },
-    {
-      "name": "0024 - Taimur Hossain",
-      "count": 191,
-      "revenue": 18429300
+      "count": 259,
+      "revenue": 37587700
     },
     {
       "name": "0026 - Ohidul Islam",
-      "count": 233,
-      "revenue": 17363500
+      "count": 388,
+      "revenue": 32975000
+    },
+    {
+      "name": "0024 - Taimur Hossain",
+      "count": 266,
+      "revenue": 30602300
     },
     {
       "name": "Habibur Rahman",
@@ -484,23 +624,101 @@
       "revenue": 383000
     },
     {
-      "name": "N/A",
+      "name": "Nazrul Islam",
+      "count": 1,
+      "revenue": 59000
+    },
+    {
+      "name": "General Rep",
       "count": 366,
+      "revenue": 0
+    },
+    {
+      "name": "Deposit Agent",
+      "count": 8,
       "revenue": 0
     }
   ],
   "paymentMethods": {
-    "COD": 6047,
+    "COD": 7438,
     "Bank Deposited": 1643,
     "Credit": 2979,
-    "MFS Deposited": 1
+    "MFS Deposited": 1,
+    "Power Mall - City Bank": 2,
+    "Balance Transfer": 3,
+    "Amaya Account": 10,
+    "Power Mall - City Bank - **87001": 2506,
+    "Power Mall - Brac Bank - **950001": 68,
+    "Adjustment": 313,
+    "Adjustment - HONOR 400 5G - 12/512 Return": 1,
+    "ABC  INTERNATIONAL": 247,
+    "Tamal Issue Adjustment": 14,
+    "Amaya TV Account": 1,
+    "Amaya Industries -  Brac Bank - **90002": 120,
+    "Nexa Tech - Brac Bank": 499,
+    "ZTECH BD - City Bank": 490,
+    "ZTECH BD - Brac Bank": 4,
+    "Nexa Tech - City Bank": 2,
+    "SKY VIEW": 317,
+    "SKY VIEW - SBP": 144,
+    "SkyView- MTB": 1,
+    "SKY VIEW - MTB": 4,
+    "Bank Transfer": 8
   },
   "brands": {
     "Xiaomi / Redmi": 399892400,
     "Internal Transfer": 0,
     "Honor": 907894200,
     "Other": 16211800,
-    "Apple": 5184000
+    "Apple": 5184000,
+    "Bank Deposit": 1263030037
   },
-  "builtAt": "2026-10-08T20:34:43.832Z"
+  "sources": [
+    {
+      "id": "apps-script-primary",
+      "name": "Google Apps Script Executive API",
+      "url": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
+      "status": "active",
+      "recordsCount": 10670,
+      "lastSynced": "2026-10-08T21:56:46.666Z",
+      "message": "Direct live stream connected and active."
+    },
+    {
+      "id": "sheet-deposits",
+      "name": "Live Deposits & Store Ledger",
+      "url": "https://docs.google.com/spreadsheets/d/1U1oAloFWrNMWpwe5KHcUDxGv8gTQyp8prAcMvyGq5yk/edit?resourcekey=&gid=257611599#gid=257611599",
+      "status": "active",
+      "recordsCount": 6145,
+      "lastSynced": "2026-10-08T21:56:56.637Z",
+      "message": "Successfully ingested 6145 live sheet entries."
+    },
+    {
+      "id": "sheet-devices",
+      "name": "Live Device Inventory & Distribution",
+      "url": "https://docs.google.com/spreadsheets/d/1Vy0LB_ROivQthO41x49ezzIi2xljesjdC59OlUSmG0E/edit?gid=1061898040#gid=1061898040",
+      "status": "active",
+      "recordsCount": 98,
+      "lastSynced": "2026-10-08T21:57:04.439Z",
+      "message": "Successfully ingested 98 live sheet entries."
+    },
+    {
+      "id": "sheet-master-3",
+      "name": "Extended Operational Ledger A",
+      "url": "https://docs.google.com/spreadsheets/d/1bqkVehJun-96yjFNrJRw9S89e3YSjt1pu8e6d0x07bk/edit?gid=0#gid=0",
+      "status": "protected",
+      "recordsCount": 0,
+      "lastSynced": "2026-10-08T21:57:08.888Z",
+      "message": "Google Sheet requires OAuth / Domain Permissions. Handled gracefully."
+    },
+    {
+      "id": "sheet-master-4",
+      "name": "Extended Operational Ledger B",
+      "url": "https://docs.google.com/spreadsheets/d/1mop7ZAi0wxPjLmz-Fxc8u0vBKA9gtglrvO234QTEXDo/edit?gid=1592258554#gid=1592258554",
+      "status": "protected",
+      "recordsCount": 0,
+      "lastSynced": "2026-10-08T21:57:09.991Z",
+      "message": "Google Sheet requires OAuth / Domain Permissions. Handled gracefully."
+    }
+  ],
+  "builtAt": "2026-10-08T21:57:09.992Z"
 }

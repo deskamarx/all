@@ -9,48 +9,70 @@ interface Props {
 }
 
 export const ApiPage: FC<Props> = ({ meta, sources, onRefresh }) => {
+  const sourceList = meta.sources || [];
+
   return (
     <>
       <div className="panel fade-up">
         <div className="panel-hd">
           <div className="panel-title">
-            Google Apps Script API Engine <span>Live Data Connection</span>
+            Multi-Stream Data Pipeline <span>Live Data Connectors & Google Sheets</span>
           </div>
           <button className="btn-refresh" onClick={onRefresh}>
-            ⟳ Re-sync Endpoint
+            ⟳ Re-sync All Feeds
           </button>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <div className="source-card" style={{ padding: 16 }}>
-            <div className="source-dot" style={{ background: '#10b981' }} />
-            <div className="source-info">
-              <div className="source-name" style={{ fontSize: 14 }}>Google Apps Script Web App API</div>
-              <div className="source-url" style={{ fontSize: 12 }}>{meta.endpoint}</div>
-            </div>
-            <div className="source-actions">
-              <span className="pill pill-green">Status 200 OK</span>
-              <span className="pill pill-cyan">JSON API</span>
-              <a className="source-link" href={meta.endpoint} target="_blank" rel="noopener noreferrer">
-                Inspect Raw JSON ↗
-              </a>
-            </div>
-          </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          {sourceList.map((src) => {
+            const isActive = src.status === 'active';
+            const isProtected = src.status === 'protected';
+            const dotColor = isActive ? '#10b981' : isProtected ? '#f59e0b' : '#ef4444';
+            const badgeClass = isActive ? 'pill-green' : isProtected ? 'pill-purple' : 'pill-red';
+            const badgeLabel = isActive
+              ? `Active (${fmtNum(src.recordsCount)} records)`
+              : isProtected
+              ? 'OAuth / Private'
+              : 'Error';
+
+            return (
+              <div key={src.id} className="source-card" style={{ padding: 18, background: 'rgba(255,255,255,0.02)', borderRadius: 10, border: '1px solid var(--border)' }}>
+                <div className="source-dot" style={{ background: dotColor, width: 10, height: 10, borderRadius: '50%', flexShrink: 0 }} />
+                <div className="source-info" style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                    <div className="source-name" style={{ fontSize: 14, fontWeight: 700, color: 'var(--text-1)' }}>{src.name}</div>
+                    <span className={`pill ${badgeClass}`} style={{ fontSize: 10, padding: '2px 8px' }}>{badgeLabel}</span>
+                  </div>
+                  <div className="source-url" style={{ fontSize: 11, color: 'var(--text-3)', wordBreak: 'break-all', marginTop: 4 }}>
+                    {src.url}
+                  </div>
+                  <div style={{ fontSize: 11, color: isActive ? 'var(--cyan)' : 'var(--text-2)', marginTop: 4 }}>
+                    {src.message}
+                  </div>
+                </div>
+                <div className="source-actions">
+                  <a className="source-link" href={src.url} target="_blank" rel="noopener noreferrer" style={{ whiteSpace: 'nowrap' }}>
+                    Inspect Stream ↗
+                  </a>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
       {/* Sync stats */}
       <div className="panel fade-up d-2 mt-18">
         <div className="panel-hd">
-          <div className="panel-title">Sync Details</div>
+          <div className="panel-title">Data Ingestion Architecture</div>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 14 }}>
           {[
-            { label: 'Total Records Synced', value: fmtNum(meta.totalOrders), color: 'var(--blue)' },
-            { label: 'Last Sync Timestamp', value: fmtDate(meta.builtAt), color: 'var(--cyan)' },
-            { label: 'Source Authentication', value: sources.accessEmail, color: 'var(--green)' },
-            { label: 'Integration Mode', value: 'Google Apps Script Direct API', color: 'var(--purple)' },
+            { label: 'Total Aggregated Records', value: fmtNum(meta.totalOrders), color: 'var(--blue)' },
+            { label: 'Active Live Connectors', value: `${sourceList.filter(s => s.status === 'active').length} / ${sourceList.length}`, color: 'var(--green)' },
+            { label: 'Pipeline Mode', value: sources.mode || 'Multi-Stream Stream Pipeline', color: 'var(--purple)' },
+            { label: 'Last Pipeline Sync', value: fmtDate(meta.builtAt), color: 'var(--cyan)' },
           ].map(item => (
             <div key={item.label} style={{
               padding: '14px 16px',

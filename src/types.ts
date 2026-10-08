@@ -3,6 +3,7 @@
 export interface OrderRecord {
   id: string;
   sourceSheet: string;
+  sourceType?: string;
   date: string;
   rep: string;
   email: string;
@@ -42,6 +43,16 @@ export interface RepStat {
   revenue: number;
 }
 
+export interface SourceHealth {
+  id: string;
+  name: string;
+  url: string;
+  status: 'active' | 'protected' | 'error';
+  recordsCount: number;
+  lastSynced: string;
+  message: string;
+}
+
 export interface AppMeta {
   endpoint: string;
   totalOrders: number;
@@ -52,6 +63,7 @@ export interface AppMeta {
   topReps: RepStat[];
   paymentMethods: Record<string, number>;
   brands: Record<string, number>;
+  sources?: SourceHealth[];
   builtAt: string;
 }
 
@@ -60,6 +72,7 @@ export interface SourcesConfig {
   accessEmail: string;
   lastUpdated: string;
   mode: string;
+  sourcesList?: SourceHealth[];
 }
 
 export interface AppData {
