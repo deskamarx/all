@@ -66,20 +66,26 @@ function OverviewSourcesSnippet({ data }: { data: AppData }) {
         <div className="panel-title">Connected Spreadsheets <span>{src.length} sources</span></div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-        {src.map(s => (
-          <div key={s.id} className="source-card" style={{ padding: '10px 14px' }}>
-            <div className="source-dot" style={{ background: s.color ?? catColor[s.category] ?? '#64748b' }} />
-            <div className="source-info">
-              <div className="source-name" style={{ fontSize: 12 }}>{s.name}</div>
-              <div className="source-url">{s.url}</div>
-            </div>
-            <div className="source-actions">
-              <span className={`pill pill-${s.category === 'Finance' ? 'green' : 'blue'}`} style={{ fontSize: 10 }}>{s.category}</span>
-              <span className="pill pill-cyan" style={{ fontSize: 10 }}>{s.responsible}</span>
-              <a className="source-link" href={s.url} target="_blank" rel="noopener noreferrer">Open ↗</a>
-            </div>
+        {src.length === 0 ? (
+          <div style={{ padding: '20px 14px', textAlign: 'center', color: 'var(--text-3)', fontSize: 12, background: 'rgba(255,255,255,0.015)', borderRadius: 'var(--radius)', border: '1px dashed var(--border)' }}>
+            No spreadsheets connected. Go to the Data Sources tab to configure new sheets.
           </div>
-        ))}
+        ) : (
+          src.map(s => (
+            <div key={s.id} className="source-card" style={{ padding: '10px 14px' }}>
+              <div className="source-dot" style={{ background: s.color ?? catColor[s.category] ?? '#64748b' }} />
+              <div className="source-info">
+                <div className="source-name" style={{ fontSize: 12 }}>{s.name}</div>
+                <div className="source-url">{s.url}</div>
+              </div>
+              <div className="source-actions">
+                <span className={`pill pill-${s.category === 'Finance' ? 'green' : 'blue'}`} style={{ fontSize: 10 }}>{s.category}</span>
+                <span className="pill pill-cyan" style={{ fontSize: 10 }}>{s.responsible}</span>
+                <a className="source-link" href={s.url} target="_blank" rel="noopener noreferrer">Open ↗</a>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

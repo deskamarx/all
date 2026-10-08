@@ -58,7 +58,13 @@ export const SourcesPage: FC<Props> = ({ config }) => {
           </span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {sources.map((src, i) => <SourceCard key={src.id} src={src} idx={i} />)}
+          {sources.length === 0 ? (
+            <div style={{ padding: '24px 16px', textAlign: 'center', color: 'var(--text-3)', fontSize: 13, background: 'rgba(255,255,255,0.015)', borderRadius: 'var(--radius)', border: '1px dashed var(--border)' }}>
+              ✨ No spreadsheets connected yet. Follow the instructions below to add your first Google Sheet.
+            </div>
+          ) : (
+            sources.map((src, i) => <SourceCard key={src.id} src={src} idx={i} />)
+          )}
         </div>
       </div>
 
