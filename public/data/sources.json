@@ -1,6 +1,50 @@
 {
   "sources": [
     {
+      "id": "SHEET1",
+      "name": "Sheet 1 — Operational Ledger",
+      "url": "https://docs.google.com/spreadsheets/d/1CcArUO1Ezisacnf_pR-1GtZbrhScCaGM/edit?gid=1002876108#gid=1002876108",
+      "docId": "1CcArUO1Ezisacnf_pR-1GtZbrhScCaGM",
+      "gid": "1002876108",
+      "category": "Operations",
+      "responsible": "Operations Team",
+      "color": "#ec4899",
+      "enabled": true
+    },
+    {
+      "id": "SHEET2",
+      "name": "Sheet 2 — Master Task & Links Directory",
+      "url": "https://docs.google.com/spreadsheets/d/1_HuqeQMIaWOiATeHddFm5tUpsrj0x7EmatN1W_IJLRY/edit?gid=1105115712#gid=1105115712",
+      "docId": "1_HuqeQMIaWOiATeHddFm5tUpsrj0x7EmatN1W_IJLRY",
+      "gid": "1105115712",
+      "category": "Directory",
+      "responsible": "Management",
+      "color": "#06b6d4",
+      "enabled": true
+    },
+    {
+      "id": "SHEET3",
+      "name": "Sheet 3 — Workstation Index",
+      "url": "https://docs.google.com/spreadsheets/d/1W56YQwx-2AVy-bOOOtplCFPUF27uC0YZShobStkBB_Y/edit?gid=165729331#gid=165729331",
+      "docId": "1W56YQwx-2AVy-bOOOtplCFPUF27uC0YZShobStkBB_Y",
+      "gid": "165729331",
+      "category": "Logistics",
+      "responsible": "Admin",
+      "color": "#8b5cf6",
+      "enabled": true
+    },
+    {
+      "id": "TV_ORDER",
+      "name": "TV Order Processing Ledger",
+      "url": "https://docs.google.com/spreadsheets/d/1-uKP2AFJyVrwibGMZVN7qy9sgdIeKGM4z74SYd4GUXQ/edit?gid=1285786443#gid=1285786443",
+      "docId": "1-uKP2AFJyVrwibGMZVN7qy9sgdIeKGM4z74SYd4GUXQ",
+      "gid": "1285786443",
+      "category": "Operations",
+      "responsible": "TV Processing",
+      "color": "#3b82f6",
+      "enabled": true
+    },
+    {
       "id": "NW",
       "name": "NW — Nazrul Wing",
       "url": "https://docs.google.com/spreadsheets/d/1mop7ZAi0wxPjLmz-Fxc8u0vBKA9gtglrvO234QTEXDo/edit?gid=929163505#gid=929163505",
@@ -46,5 +90,5 @@
     }
   ],
   "accessEmail": "bahalul1964@gmail.com",
-  "lastUpdated": "2026-10-09T00:00:00Z"
+  "lastUpdated": "2026-10-09T01:06:00Z"
 }
