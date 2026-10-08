@@ -36,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: Sync Live Apps Script Data
-        run: node scripts/sync-appscript.js
+        run: node scripts/build-data.js
 
       - name: Build project
         run: npm run build

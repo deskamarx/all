@@ -1,91 +1,79 @@
 import { useState, useEffect, useCallback } from 'react';
 import './index.css';
-import { loadAppData, fmtNum, fmtDate } from './data';
+import { loadAppData, fmtCurrency, fmtNum, fmtDate } from './data';
 import type { AppData, PageId } from './types';
 
-import { KpiGrid, StateChart, TopTabs } from './components/KpiSection';
-import { StatePieChart, EventsTrend } from './components/Charts';
-import { ImeiPage } from './components/ImeiPage';
-import { StockPage } from './components/StockPage';
-import { SourcesPage } from './components/SourcesPage';
-import { ConflictsPage } from './components/ConflictsPage';
+import { KpiGrid } from './components/KpiSection';
+import { BrandPieChart, TopProductsBarChart, PaymentMethodsBar } from './components/Charts';
+import { OrdersPage } from './components/OrdersPage';
+import { ProductsPage } from './components/ProductsPage';
+import { ClientsPage } from './components/ClientsPage';
+import { ApiPage } from './components/ApiPage';
 
 const PAGES: { id: PageId; label: string; emoji: string }[] = [
-  { id: 'overview',  label: 'Overview',     emoji: '🏠' },
-  { id: 'imei',      label: 'IMEI Tracker', emoji: '🔍' },
-  { id: 'stock',     label: 'Stock & Flow', emoji: '📊' },
-  { id: 'sources',   label: 'Data Sources', emoji: '🔗' },
-  { id: 'conflicts', label: 'Conflicts',    emoji: '⚠️' },
+  { id: 'overview', label: 'Executive Dashboard', emoji: '🏠' },
+  { id: 'orders',   label: 'Order Ledger',        emoji: '📦' },
+  { id: 'products', label: 'Products & Brands',   emoji: '📊' },
+  { id: 'clients',  label: 'Client Directory',    emoji: '🏪' },
+  { id: 'api',      label: 'Apps Script API',     emoji: '⚡' },
 ];
 
-function Alerts({ data }: { data: AppData }) {
-  const { meta } = data;
-  const sc = meta.stateCounts ?? {};
-  const d = meta.derived ?? {};
-  const alerts = [
-    meta.conflicts > 500 && { type: 'danger' as const, icon: '🔴', title: 'Critical: High Conflict Count', body: `${fmtNum(meta.conflicts)} IMEI conflicts — immediate review required. Check Conflicts tab.` },
-    meta.repeatIds > 5000 && { type: 'warn' as const, icon: '⚠️', title: 'High Duplicate Rate', body: `${fmtNum(meta.repeatIds)} duplicate IMEIs may indicate data-entry errors or unlogged stock transfers.` },
-    d.assetsWithoutTerminalState > 30000 && { type: 'warn' as const, icon: '📦', title: 'Large Unclassified Pool', body: `${fmtNum(d.assetsWithoutTerminalState)} assets have no terminal state — they may still be in the pipeline.` },
-    meta.errorTokens > 0 && { type: 'info' as const, icon: 'ℹ️', title: 'Invalid Data Tokens', body: `${fmtNum(meta.errorTokens)} error tokens detected. Some rows may contain malformed IMEI numbers.` },
-    ((sc['Sold Delivered'] ?? 0) / meta.assets) > 0.05 && { type: 'ok' as const, icon: '✅', title: 'Healthy Sales Rate', body: `${((sc['Sold Delivered']??0)/meta.assets*100).toFixed(1)}% of inventory sold & delivered. Operations are progressing.` },
-  ].filter(Boolean) as Array<{ type: 'danger'|'warn'|'info'|'ok'; icon: string; title: string; body: string }>;
+function QuickOverviewTables({ data }: { data: AppData }) {
+  const topProds = (data.meta.topProducts || []).slice(0, 5);
+  const topClients = (data.meta.topClients || []).slice(0, 5);
 
   return (
-    <div className="panel fade-up d-5">
-      <div className="panel-hd">
-        <div className="panel-title">⚡ Attention Required</div>
+    <div className="grid-2 mt-18">
+      <div className="panel fade-up d-4">
+        <div className="panel-hd">
+          <div className="panel-title">Top Revenue Products <span>top 5</span></div>
+        </div>
+        <div className="table-wrap">
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Qty</th>
+                <th>Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              {topProds.map(p => (
+                <tr key={p.name}>
+                  <td className="highlight">{p.name}</td>
+                  <td className="num">{fmtNum(p.qty)}</td>
+                  <td className="highlight text-mono">{fmtCurrency(p.revenue)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div className="alert-list">
-        {alerts.map((a, i) => (
-          <div key={i} className={`alert-item ${a.type}`}>
-            <div className="alert-icon">{a.icon}</div>
-            <div className="alert-body">
-              <span className="alert-title">{a.title}</span>
-              {a.body}
-            </div>
-          </div>
-        ))}
-        {alerts.length === 0 && (
-          <div className="alert-item ok">
-            <div className="alert-icon">✅</div>
-            <div className="alert-body"><span className="alert-title">All Clear</span>No critical issues detected.</div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
 
-function OverviewSourcesSnippet({ data }: { data: AppData }) {
-  const src = data.sources.sources;
-  const catColor: Record<string, string> = { Finance: '#10b981', Logistics: '#3b82f6', Operations: '#8b5cf6' };
-
-  return (
-    <div className="panel fade-up d-6" style={{ marginTop: 0 }}>
-      <div className="panel-hd">
-        <div className="panel-title">Connected Spreadsheets <span>{src.length} sources</span></div>
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-        {src.length === 0 ? (
-          <div style={{ padding: '20px 14px', textAlign: 'center', color: 'var(--text-3)', fontSize: 12, background: 'rgba(255,255,255,0.015)', borderRadius: 'var(--radius)', border: '1px dashed var(--border)' }}>
-            No spreadsheets connected. Go to the Data Sources tab to configure new sheets.
-          </div>
-        ) : (
-          src.map(s => (
-            <div key={s.id} className="source-card" style={{ padding: '10px 14px' }}>
-              <div className="source-dot" style={{ background: s.color ?? catColor[s.category] ?? '#64748b' }} />
-              <div className="source-info">
-                <div className="source-name" style={{ fontSize: 12 }}>{s.name}</div>
-                <div className="source-url">{s.url}</div>
-              </div>
-              <div className="source-actions">
-                <span className={`pill pill-${s.category === 'Finance' ? 'green' : 'blue'}`} style={{ fontSize: 10 }}>{s.category}</span>
-                <span className="pill pill-cyan" style={{ fontSize: 10 }}>{s.responsible}</span>
-                <a className="source-link" href={s.url} target="_blank" rel="noopener noreferrer">Open ↗</a>
-              </div>
-            </div>
-          ))
-        )}
+      <div className="panel fade-up d-5">
+        <div className="panel-hd">
+          <div className="panel-title">Top Store Partners <span>top 5</span></div>
+        </div>
+        <div className="table-wrap">
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Store</th>
+                <th>Orders</th>
+                <th>Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              {topClients.map(c => (
+                <tr key={c.name}>
+                  <td className="highlight">{c.name}</td>
+                  <td className="num">{fmtNum(c.count)}</td>
+                  <td className="highlight text-mono">{fmtCurrency(c.revenue)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
@@ -94,21 +82,19 @@ function OverviewSourcesSnippet({ data }: { data: AppData }) {
 export default function App() {
   const [data, setData] = useState<AppData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [loadMsg, setLoadMsg] = useState('Initialising data engine…');
+  const [loadMsg, setLoadMsg] = useState('Initialising Apps Script data engine…');
   const [page, setPage] = useState<PageId>('overview');
 
   const load = useCallback(async () => {
     setData(null);
     setError(null);
     try {
-      setLoadMsg('Loading metadata…');
-      await new Promise(r => setTimeout(r, 80));
-      setLoadMsg('Loading asset registry…');
-      await new Promise(r => setTimeout(r, 80));
-      setLoadMsg('Loading event stream…');
+      setLoadMsg('Connecting to Google Apps Script API…');
+      await new Promise(r => setTimeout(r, 60));
+      setLoadMsg('Parsing order records & revenue stats…');
       const d = await loadAppData();
-      setLoadMsg('Building interface…');
-      await new Promise(r => setTimeout(r, 200));
+      setLoadMsg('Rendering interface…');
+      await new Promise(r => setTimeout(r, 120));
       setData(d);
     } catch (e) {
       setError((e as Error).message);
@@ -120,9 +106,9 @@ export default function App() {
   if (error) {
     return (
       <div className="loading-screen">
-        <div style={{ color: 'var(--red)', fontWeight: 700, fontSize: 15 }}>Failed to load data</div>
+        <div style={{ color: 'var(--red)', fontWeight: 700, fontSize: 15 }}>Failed to load Apps Script data</div>
         <div style={{ fontSize: 12, color: 'var(--text-2)', maxWidth: 400, textAlign: 'center' }}>{error}</div>
-        <button className="btn-refresh" onClick={load} style={{ marginTop: 8 }}>Retry</button>
+        <button className="btn-refresh" onClick={load} style={{ marginTop: 8 }}>Retry Connection</button>
       </div>
     );
   }
@@ -133,15 +119,14 @@ export default function App() {
         <img src={`${import.meta.env.BASE_URL}brand/amaya-rw-dark.png`} className="loading-logo" alt="AMAYA"
           onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
         <div className="loader-ring" />
-        <div className="loading-title">AMAYA Intelligence Hub</div>
+        <div className="loading-title">AMAYA Apps Script Hub</div>
         <div className="loading-sub">{loadMsg}</div>
         <div className="loading-bar-wrap"><div className="loading-bar" /></div>
       </div>
     );
   }
 
-  const { meta, assets, sources: srcConfig } = data;
-  const srcCount = (srcConfig.sources?.length ?? 0) + Object.keys(meta.sources ?? {}).length;
+  const { meta, orders, sources } = data;
 
   return (
     <>
@@ -152,7 +137,7 @@ export default function App() {
             onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           <div className="nav-brand-text">
             <div className="nav-brand-name">AMAYA Industries</div>
-            <div className="nav-brand-sub">Intelligence Hub</div>
+            <div className="nav-brand-sub">Apps Script Hub</div>
           </div>
         </a>
 
@@ -169,30 +154,28 @@ export default function App() {
         </div>
 
         <div className="nav-right">
-          <div className="live-badge">● LIVE</div>
-          <button className="btn-refresh" onClick={load}>⟳ Refresh</button>
+          <div className="live-badge">● LIVE API</div>
+          <button className="btn-refresh" onClick={load}>⟳ Sync API</button>
         </div>
       </nav>
 
       {/* ═══ HERO ═══ */}
       <div className="hero">
         <div>
-          <h1 className="hero-title">Business <span className="grad">Intelligence</span> Hub</h1>
-          <p className="hero-sub">AMAYA Industries — Real-time operational insights from {srcCount} connected spreadsheets</p>
+          <h1 className="hero-title">Apps Script <span className="grad">Intelligence</span> Hub</h1>
+          <p className="hero-sub">Direct API Integration — Real-time operational intelligence from single Google Apps Script endpoint</p>
           <div className="hero-pills">
-            <span className="pill pill-blue">{fmtNum(meta.assets)} Assets</span>
-            <span className="pill pill-green">{((meta.stateCounts?.['Sold Delivered']??0)/meta.assets*100).toFixed(1)}% Sold</span>
-            <span className="pill pill-cyan">{fmtNum(meta.events)} Events</span>
-            <span className="pill pill-red">{fmtNum(meta.conflicts ?? 0)} Conflicts</span>
-            <span className="pill pill-amber">{fmtNum(meta.repeatIds ?? 0)} Duplicates</span>
-            <span className="pill pill-purple">{srcCount} Sources</span>
+            <span className="pill pill-green">{fmtCurrency(meta.totalRevenue)} Revenue</span>
+            <span className="pill pill-blue">{fmtNum(meta.totalOrders)} Orders</span>
+            <span className="pill pill-cyan">{fmtNum(meta.totalItems)} Units Sold</span>
+            <span className="pill pill-purple">Live Web App API</span>
           </div>
         </div>
         <div className="hero-right">
           <div className="hero-ts">
-            Data built {fmtDate(meta.builtAt)}<br />
+            API Sync {fmtDate(meta.builtAt)}<br />
             <span className="text-mono" style={{ color: 'var(--cyan)', fontSize: 10 }}>
-              v{meta.dataVersion} · seq {meta.dataSeq}
+              Google Apps Script Stream
             </span>
           </div>
         </div>
@@ -204,44 +187,38 @@ export default function App() {
         {/* ── OVERVIEW ── */}
         {page === 'overview' && (
           <>
-            <KpiGrid meta={meta} sourcesCount={srcCount} />
+            <KpiGrid meta={meta} />
             <div className="grid-2">
-              <StateChart meta={meta} />
-              <TopTabs meta={meta} onViewAll={() => setPage('stock')} />
+              <BrandPieChart meta={meta} />
+              <PaymentMethodsBar meta={meta} />
             </div>
-            <div className="grid-2">
-              <StatePieChart meta={meta} />
-              <Alerts data={data} />
-            </div>
-            <EventsTrend meta={meta} />
-            <OverviewSourcesSnippet data={data} />
+            <TopProductsBarChart meta={meta} />
+            <QuickOverviewTables data={data} />
           </>
         )}
 
-        {/* ── IMEI ── */}
-        {page === 'imei' && <ImeiPage assets={assets} meta={meta} />}
+        {/* ── ORDERS ── */}
+        {page === 'orders' && <OrdersPage orders={orders} meta={meta} />}
 
-        {/* ── STOCK ── */}
-        {page === 'stock' && <StockPage meta={meta} />}
+        {/* ── PRODUCTS ── */}
+        {page === 'products' && <ProductsPage meta={meta} />}
 
-        {/* ── SOURCES ── */}
-        {page === 'sources' && <SourcesPage config={srcConfig} />}
+        {/* ── CLIENTS ── */}
+        {page === 'clients' && <ClientsPage meta={meta} />}
 
-        {/* ── CONFLICTS ── */}
-        {page === 'conflicts' && <ConflictsPage meta={meta} assets={assets} />}
+        {/* ── API ── */}
+        {page === 'api' && <ApiPage meta={meta} sources={sources} onRefresh={load} />}
 
       </main>
 
       {/* ═══ FOOTER ═══ */}
       <footer className="footer">
         <span>
-          AMAYA Industries Intelligence Hub · Data: {fmtDate(meta.builtAt)} ·{' '}
+          AMAYA Apps Script Intelligence Hub · API Sync: {fmtDate(meta.builtAt)} ·{' '}
           <a href="https://github.com/deskamarx/all" target="_blank" rel="noopener">GitHub</a>
         </span>
         <span>
-          <a href={`${import.meta.env.BASE_URL}data/sources.json`} target="_blank" rel="noopener">sources.json</a>
-          {' · '}
-          <a href={`${import.meta.env.BASE_URL}data/meta.json`} target="_blank" rel="noopener">meta.json</a>
+          <a href={meta.endpoint} target="_blank" rel="noopener">Google Apps Script Endpoint ↗</a>
         </span>
       </footer>
     </>

@@ -1,185 +1,506 @@
 {
-  "generatedFrom": "Apps Script Web App Endpoint",
   "endpoint": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
-  "assets": 319,
-  "events": 10670,
-  "totalAmount": 1329182400,
-  "totalQuantity": 38032,
-  "stateCounts": {
-    "Sold Delivered": 7325,
-    "Stock Transfer": 366,
-    "Pending Credit": 2979,
-    "Service": 106
-  },
-  "topTabs": [
-    [
-      "Source Sheet 1",
-      10304
-    ],
-    [
-      "Source Sheet 2",
-      1
-    ],
-    [
-      "Source Sheet 3",
-      311
-    ],
-    [
-      "Source Sheet 4",
-      54
-    ]
-  ],
+  "totalOrders": 10670,
+  "totalRevenue": 1329182400,
+  "totalItems": 38032,
   "topProducts": [
-    [
-      "HONOR 400 5G - 12GB/512GB",
-      753
-    ],
-    [
-      "HONOR 400 5G - 12GB/256GB",
-      742
-    ],
-    [
-      "Redmi Note 15 4G - 8/256GB",
-      631
-    ],
-    [
-      "HONOR 400 Pro 5G - 12GB/512GB",
-      505
-    ],
-    [
-      "Honor X9D 12/256",
-      456
-    ],
-    [
-      "Honor X9D 8/256",
-      446
-    ],
-    [
-      "HONOR 200 5G - 12GB/256GB",
-      431
-    ],
-    [
-      "HONOR X9C 5G - 12GB/256GB",
-      422
-    ],
-    [
-      "HONOR 400 Lite 5G - 12GB/256GB",
-      378
-    ],
-    [
-      "General Product",
-      365
-    ],
-    [
-      "HONOR 600 5G - 12/256GB",
-      343
-    ],
-    [
-      "HONOR 600 Pro 5G - 12/256GB",
-      318
-    ],
-    [
-      "Honor 600 12/256",
-      308
-    ],
-    [
-      "HONOR 600 5G - 8/256GB",
-      294
-    ],
-    [
-      "Honor 600 Pro 12/256",
-      276
-    ]
+    {
+      "name": "HONOR 400 5G - 12GB/256GB",
+      "count": 742,
+      "revenue": 106648900,
+      "qty": 2663,
+      "brand": "Honor"
+    },
+    {
+      "name": "Redmi Note 15 4G - 8/256GB",
+      "count": 631,
+      "revenue": 102546600,
+      "qty": 4038,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "HONOR 400 5G - 12GB/512GB",
+      "count": 753,
+      "revenue": 85843100,
+      "qty": 2038,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR 200 5G - 12GB/256GB",
+      "count": 431,
+      "revenue": 80646500,
+      "qty": 2468,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR 600 Pro 5G - 12/256GB",
+      "count": 318,
+      "revenue": 74286000,
+      "qty": 1016,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR 400 Pro 5G - 12GB/512GB",
+      "count": 505,
+      "revenue": 74202000,
+      "qty": 1231,
+      "brand": "Honor"
+    },
+    {
+      "name": "Honor 600 Pro 12/256",
+      "count": 276,
+      "revenue": 70798000,
+      "qty": 940,
+      "brand": "Honor"
+    },
+    {
+      "name": "Honor 600 12/256",
+      "count": 308,
+      "revenue": 70558000,
+      "qty": 1295,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR 600 5G - 12/256GB",
+      "count": 343,
+      "revenue": 63266000,
+      "qty": 1231,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR 600 5G - 8/256GB",
+      "count": 294,
+      "revenue": 50268100,
+      "qty": 1050,
+      "brand": "Honor"
+    },
+    {
+      "name": "Honor X9D 12/256",
+      "count": 456,
+      "revenue": 44163100,
+      "qty": 1201,
+      "brand": "Honor"
+    },
+    {
+      "name": "Honor X9D 8/256",
+      "count": 446,
+      "revenue": 41427000,
+      "qty": 1241,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR X9C 5G - 12GB/256GB",
+      "count": 422,
+      "revenue": 37283000,
+      "qty": 1254,
+      "brand": "Honor"
+    },
+    {
+      "name": "HONOR 400 Lite 5G - 12GB/256GB",
+      "count": 378,
+      "revenue": 32460000,
+      "qty": 1257,
+      "brand": "Honor"
+    },
+    {
+      "name": "Honor 600 Lite - 8/256GB",
+      "count": 268,
+      "revenue": 27509200,
+      "qty": 755,
+      "brand": "Honor"
+    },
+    {
+      "name": "Redmi 15 6/128",
+      "count": 140,
+      "revenue": 16698400,
+      "qty": 842,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15C 4G - 8/256GB",
+      "count": 133,
+      "revenue": 15443000,
+      "qty": 816,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15C 4G - 6/128GB",
+      "count": 170,
+      "revenue": 15222900,
+      "qty": 939,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 Pro Plus 5G 8/256",
+      "count": 84,
+      "revenue": 14278500,
+      "qty": 351,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 4G - 6/128GB",
+      "count": 129,
+      "revenue": 14236200,
+      "qty": 662,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15C 4G - 4/128GB",
+      "count": 127,
+      "revenue": 12585100,
+      "qty": 835,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 Pro 5G - 8/256GB",
+      "count": 158,
+      "revenue": 12026000,
+      "qty": 357,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15C 8/256",
+      "count": 87,
+      "revenue": 11940800,
+      "qty": 592,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 17 8/256",
+      "count": 62,
+      "revenue": 11765100,
+      "qty": 400,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15 8/256",
+      "count": 127,
+      "revenue": 10368400,
+      "qty": 497,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 17 6/128",
+      "count": 61,
+      "revenue": 10335600,
+      "qty": 399,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Pad 2 6/128",
+      "count": 47,
+      "revenue": 9505100,
+      "qty": 433,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15 4G - 8/256GB",
+      "count": 84,
+      "revenue": 9274500,
+      "qty": 439,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi 15 4G - 6/128GB",
+      "count": 101,
+      "revenue": 9150000,
+      "qty": 497,
+      "brand": "Xiaomi / Redmi"
+    },
+    {
+      "name": "Redmi Note 15 Pro 5G - 12/512GB",
+      "count": 101,
+      "revenue": 7862000,
+      "qty": 210,
+      "brand": "Xiaomi / Redmi"
+    }
   ],
   "topClients": [
-    [
-      "Dazzle",
-      477
-    ],
-    [
-      "Mobile Paradise",
-      465
-    ],
-    [
-      "Gadgetopia",
-      403
-    ],
-    [
-      "Famous Telecom",
-      386
-    ],
-    [
-      "Cell Tech BD - JFP",
-      334
-    ],
-    [
-      "Like Telecom - BCT",
-      282
-    ],
-    [
-      "Friends Telecom-Ctg",
-      238
-    ],
-    [
-      "Mobile Bazar Rajshahi",
-      220
-    ],
-    [
-      "Rahima Tel",
-      203
-    ],
-    [
-      "GunGun",
-      198
-    ],
-    [
-      "Ambix",
-      196
-    ],
-    [
-      "Bishal Electronics",
-      192
-    ],
-    [
-      "Mizan & Brothers",
-      190
-    ],
-    [
-      "Like Telecom - JFP",
-      189
-    ],
-    [
-      "Cell Mate",
-      181
-    ]
+    {
+      "name": "Dazzle",
+      "count": 477,
+      "revenue": 216977600,
+      "address": "021C & 021D, 4th floor, north court, Block B,Jamuna future park,Dhaka.",
+      "phone": " +880 18 3099 9969"
+    },
+    {
+      "name": "Famous Telecom",
+      "count": 386,
+      "revenue": 94688500,
+      "address": "4th Floor, Sanmar Ocean City, Nasirabad, Chittagong.",
+      "phone": 8801812791896
+    },
+    {
+      "name": "Mobile Paradise",
+      "count": 465,
+      "revenue": 64784100,
+      "address": "Level 4, Block A, Shop 33A, Jamuna future park",
+      "phone": "+880 1934-209037"
+    },
+    {
+      "name": "Gadgetopia",
+      "count": 403,
+      "revenue": 59845400,
+      "address": "Level-4, Shop--11, Black-D, Jamuna Future Park",
+      "phone": 8801642082924
+    },
+    {
+      "name": "Like Telecom - BCT",
+      "count": 282,
+      "revenue": 45745200,
+      "address": "Basement 2, shop 82, Bashundhara City",
+      "phone": 8801742520614
+    },
+    {
+      "name": "Cell Tech BD - JFP",
+      "count": 334,
+      "revenue": 44618800,
+      "address": "Shop#014b,Block#A,level#4, Jamuna future park",
+      "phone": "+880 1648-821228"
+    },
+    {
+      "name": "Friends Telecom-Ctg",
+      "count": 238,
+      "revenue": 36382200,
+      "address": "2nd floor,Shop 15,Rizwan Complex,Reazuddin Bazar,Chattogram ",
+      "phone": "01820802080"
+    },
+    {
+      "name": "Mars two",
+      "count": 153,
+      "revenue": 29919700,
+      "address": "Shatter khan complex, khandirpar, cumilla",
+      "phone": "+8801715146699"
+    },
+    {
+      "name": "Mobile Park BD",
+      "count": 133,
+      "revenue": 26283200,
+      "address": "37/A2, Block: C, Level: 4, Jamuna Future park",
+      "phone": 8801916858692
+    },
+    {
+      "name": "Rahima Tel",
+      "count": 203,
+      "revenue": 25698400,
+      "address": "Khandakar haq tower, khandirpar Cumilla ",
+      "phone": "+880 1712-677777"
+    },
+    {
+      "name": "Bishal Electronics",
+      "count": 192,
+      "revenue": 24842600,
+      "address": "4th Floor, Sanmar Ocean City, Nasirabad, Chittagong.",
+      "phone": 8801742227411
+    },
+    {
+      "name": "Phone BD",
+      "count": 171,
+      "revenue": 24439000,
+      "address": "Shop - 2081, Block - C, Level - 4, Jamuna Future park",
+      "phone": "+880 1617-301704"
+    },
+    {
+      "name": "GunGun",
+      "count": 198,
+      "revenue": 24127800,
+      "address": "Khalibari more, B, baria sadar",
+      "phone": "+8801911097959"
+    },
+    {
+      "name": "Decent",
+      "count": 164,
+      "revenue": 24059000,
+      "address": "4th floor,Finlay sqaure,Nasirabad,Chattogram ",
+      "phone": "01872988883"
+    },
+    {
+      "name": "Ambix",
+      "count": 196,
+      "revenue": 22911100,
+      "address": "Shop No - 4A/041A1, Block - A, Level - 4, Jamuna Future Park",
+      "phone": "880 1617-301704"
+    },
+    {
+      "name": "Mizan & Brothers",
+      "count": 190,
+      "revenue": 21390000,
+      "address": "Shop No-31, Rizwan Complex, Riazuddin Bazar, Chittagong.",
+      "phone": 8801839700300
+    },
+    {
+      "name": "Like Telecom - JFP",
+      "count": 189,
+      "revenue": 20286600,
+      "address": "Level 4 block A shop 30b, Jamuna Future Park",
+      "phone": 8801742520614
+    },
+    {
+      "name": "New Singapore Telecom",
+      "count": 150,
+      "revenue": 19363100,
+      "address": "Tmms mohila market, 2nd Floor, Sadar Bogura. ",
+      "phone": "+880 1755-126987"
+    },
+    {
+      "name": "Mobile Bazar Rajshahi",
+      "count": 220,
+      "revenue": 19156100,
+      "address": "Stylo premises, New market opposite side, Sultanabad, Sadar Rajshahi. ",
+      "phone": "+880 1717-142452"
+    },
+    {
+      "name": "Cell Tech BD - BCT",
+      "count": 115,
+      "revenue": 17497000,
+      "address": "Basement 01, Shop-70, Bashundhara City",
+      "phone": 8801830723375
+    },
+    {
+      "name": "Taham Tech",
+      "count": 84,
+      "revenue": 16364400,
+      "address": "Shop - 021F, Block - D, Level - 4, Jamuna Future Park",
+      "phone": "01898898999"
+    },
+    {
+      "name": "Mars Two",
+      "count": 106,
+      "revenue": 15123000,
+      "address": "Shattar khan complex ",
+      "phone": "+880 1715-146699"
+    },
+    {
+      "name": "Cell Mate",
+      "count": 181,
+      "revenue": 14945700,
+      "address": "4th Floor, Finlay Square, Nasirabad, Chittagong.",
+      "phone": 8801717132041
+    },
+    {
+      "name": "M/S Bulbul General Electronics",
+      "count": 33,
+      "revenue": 14056400,
+      "address": "A/07 Bazar Road, Savar ",
+      "phone": 8801746708701
+    },
+    {
+      "name": "Merajul Telecom",
+      "count": 91,
+      "revenue": 13749400,
+      "address": "Shop: 58, Level: 4, Shah Ali Plaza, Mirpur 10",
+      "phone": "01622230958"
+    },
+    {
+      "name": "Multimedia Gallery",
+      "count": 105,
+      "revenue": 13348400,
+      "address": "Chandpur sadar,,khalibari more",
+      "phone": "+880 1779-970011"
+    },
+    {
+      "name": "Faruk Electronics",
+      "count": 150,
+      "revenue": 12999400,
+      "address": "4th Floor, Akhtaruzzaman Center, Agrabad, Chittagong.",
+      "phone": 8801843855960
+    },
+    {
+      "name": "Cell City",
+      "count": 155,
+      "revenue": 12660800,
+      "address": "Zela porishad market, B, baria sadar",
+      "phone": "01797370380"
+    },
+    {
+      "name": "Naima Telecom",
+      "count": 138,
+      "revenue": 12564200,
+      "address": "3rd floor,Akhtaruzzaman Center,Agrabad,Ctg",
+      "phone": "+880 1817-262793"
+    },
+    {
+      "name": "M Classic",
+      "count": 70,
+      "revenue": 10513200,
+      "address": "Ctg",
+      "phone": "01828223009"
+    }
   ],
-  "conflicts": 213,
-  "repeatIds": 533,
-  "reviewQueue": 12,
-  "errorTokens": 0,
-  "emptyTabs": 0,
-  "states": [
-    "Sold Delivered",
-    "Stock Transfer",
-    "Pending Credit",
-    "Service"
+  "topReps": [
+    {
+      "name": "0025 - Imran Hossain - CTG",
+      "count": 3613,
+      "revenue": 556922300
+    },
+    {
+      "name": "0004 - Al Imran",
+      "count": 2532,
+      "revenue": 357539300
+    },
+    {
+      "name": "0094 - Shaharia Khan",
+      "count": 1934,
+      "revenue": 194213900
+    },
+    {
+      "name": "0019 - Hafizur Rahman",
+      "count": 797,
+      "revenue": 69543100
+    },
+    {
+      "name": "0035 - Rejaul Islam Sujon",
+      "count": 361,
+      "revenue": 35655000
+    },
+    {
+      "name": "0070 - Tamal Roy",
+      "count": 309,
+      "revenue": 30864400
+    },
+    {
+      "name": "0033 - Imran Hossain - DHK",
+      "count": 137,
+      "revenue": 26047900
+    },
+    {
+      "name": "Rasel",
+      "count": 194,
+      "revenue": 22220700
+    },
+    {
+      "name": "0024 - Taimur Hossain",
+      "count": 191,
+      "revenue": 18429300
+    },
+    {
+      "name": "0026 - Ohidul Islam",
+      "count": 233,
+      "revenue": 17363500
+    },
+    {
+      "name": "Habibur Rahman",
+      "count": 3,
+      "revenue": 383000
+    },
+    {
+      "name": "N/A",
+      "count": 366,
+      "revenue": 0
+    }
   ],
-  "dataVersion": "live-appscript-v1",
-  "dataSeq": 1,
-  "builtAt": "2026-10-08T20:28:09.913Z",
-  "derived": {
-    "undatedEvents": 0,
-    "eventsWithoutProduct": 45,
-    "invalidImeiAssets": 0,
-    "assetsWithoutCitation": 0,
-    "assetsWithoutDate": 0,
-    "assetsWithoutTerminalState": 366,
-    "resolvedUnknown": 0,
-    "unresolvedBecauseNeverClassified": 0,
-    "unresolvedDespiteTerminalState": 0,
-    "unmappedStateTokens": [],
-    "tabsWithEvents": 4,
-    "maxTabs": 4,
-    "maxOccurrences": 1
-  }
+  "paymentMethods": {
+    "COD": 6047,
+    "Bank Deposited": 1643,
+    "Credit": 2979,
+    "MFS Deposited": 1
+  },
+  "brands": {
+    "Xiaomi / Redmi": 399892400,
+    "Internal Transfer": 0,
+    "Honor": 907894200,
+    "Other": 16211800,
+    "Apple": 5184000
+  },
+  "builtAt": "2026-10-08T20:34:43.832Z"
 }

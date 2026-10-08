@@ -1,83 +1,71 @@
-// Types for the AMAYA Intelligence Hub
+// Types for the AMAYA Apps Script Intelligence Hub
 
-export interface MetaSource {
-  name: string;
-  url: string;
+export interface OrderRecord {
+  id: string;
+  sourceSheet: string;
+  date: string;
+  rep: string;
+  email: string;
+  product: string;
+  brand: string;
+  unitPrice: number;
+  qty: number;
+  lineTotal: number;
+  clientName: string;
+  address: string;
+  phone: string;
+  details: string;
+  paymentMethod: string;
+  notes: string;
+  syncTs: string;
 }
 
-export interface MetaDerived {
-  undatedEvents: number;
-  eventsWithoutProduct: number;
-  invalidImeiAssets: number;
-  assetsWithoutCitation: number;
-  assetsWithoutDate: number;
-  assetsWithoutTerminalState: number;
-  resolvedUnknown: number;
-  unresolvedBecauseNeverClassified: number;
-  unresolvedDespiteTerminalState: number;
-  unmappedStateTokens: string[];
-  tabsWithEvents: number;
-  maxTabs: number;
-  maxOccurrences: number;
+export interface ProductStat {
+  name: string;
+  count: number;
+  revenue: number;
+  qty: number;
+  brand: string;
+}
+
+export interface ClientStat {
+  name: string;
+  count: number;
+  revenue: number;
+  address: string;
+  phone: string;
+}
+
+export interface RepStat {
+  name: string;
+  count: number;
+  revenue: number;
 }
 
 export interface AppMeta {
-  generatedFrom: string;
-  assets: number;
-  events: number;
-  sources: Record<string, MetaSource>;
-  stateCounts: Record<string, number>;
-  topTabs: [string, number][];
-  repeatIds: number;
-  conflicts: number;
-  reviewQueue: number;
-  errorTokens: number;
-  emptyTabs: number;
-  states: string[];
-  dataVersion: string;
-  dataSeq: number;
+  endpoint: string;
+  totalOrders: number;
+  totalRevenue: number;
+  totalItems: number;
+  topProducts: ProductStat[];
+  topClients: ClientStat[];
+  topReps: RepStat[];
+  paymentMethods: Record<string, number>;
+  brands: Record<string, number>;
   builtAt: string;
-  derived: MetaDerived;
-}
-
-export interface AssetsData {
-  count: number;
-  imeis: string[];
-}
-
-export interface EventsData {
-  count: number;
-  tabDict: string[];
-  row: number[];
-  col?: number[];
-  imei?: string[];
-  state?: string[];
-  tab?: number[];
-}
-
-export interface DataSource {
-  id: string;
-  name: string;
-  url: string;
-  docId: string;
-  gid: string;
-  category: 'Finance' | 'Logistics' | 'Operations';
-  responsible: string;
-  color: string;
-  enabled: boolean;
 }
 
 export interface SourcesConfig {
-  sources: DataSource[];
+  endpoint: string;
   accessEmail: string;
   lastUpdated: string;
+  mode: string;
 }
 
 export interface AppData {
   meta: AppMeta;
-  assets: AssetsData;
-  events: EventsData;
+  orders: OrderRecord[];
   sources: SourcesConfig;
 }
 
-export type PageId = 'overview' | 'imei' | 'stock' | 'sources' | 'conflicts';
+export type PageId = 'overview' | 'orders' | 'products' | 'clients' | 'api';
