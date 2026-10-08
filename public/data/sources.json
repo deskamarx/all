@@ -1,5 +1,55 @@
 {
-  "sources": [],
+  "endpoint": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
+  "sources": [
+    {
+      "id": "SRC_1",
+      "name": "Source Sheet 1",
+      "url": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
+      "docId": "AppsScript_Web_App",
+      "gid": "0",
+      "category": "Logistics",
+      "responsible": "Apps Script Auto Sync",
+      "color": "#3b82f6",
+      "enabled": true,
+      "count": 10304
+    },
+    {
+      "id": "SRC_2",
+      "name": "Source Sheet 2",
+      "url": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
+      "docId": "AppsScript_Web_App",
+      "gid": "1",
+      "category": "Directory",
+      "responsible": "Apps Script Auto Sync",
+      "color": "#10b981",
+      "enabled": true,
+      "count": 1
+    },
+    {
+      "id": "SRC_3",
+      "name": "Source Sheet 3",
+      "url": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
+      "docId": "AppsScript_Web_App",
+      "gid": "2",
+      "category": "Operations",
+      "responsible": "Apps Script Auto Sync",
+      "color": "#8b5cf6",
+      "enabled": true,
+      "count": 311
+    },
+    {
+      "id": "SRC_4",
+      "name": "Source Sheet 4",
+      "url": "https://script.google.com/macros/s/AKfycbx18XXxHBXgoLNAdDCErE5hCP23lJWubXCu438YCSHkAf2GYv_HtQ4gAvvC5YuGyTgqMg/exec",
+      "docId": "AppsScript_Web_App",
+      "gid": "3",
+      "category": "Operations",
+      "responsible": "Apps Script Auto Sync",
+      "color": "#f59e0b",
+      "enabled": true,
+      "count": 54
+    }
+  ],
   "accessEmail": "bahalul1964@gmail.com",
-  "lastUpdated": "2026-10-09T01:14:00Z"
+  "lastUpdated": "2026-10-08T20:28:09.910Z"
 }

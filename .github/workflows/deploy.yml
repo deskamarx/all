@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *' # Auto-sync every 6 hours
   workflow_dispatch:
 
 permissions:
@@ -32,6 +34,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Sync Live Apps Script Data
+        run: node scripts/sync-appscript.js
 
       - name: Build project
         run: npm run build
